@@ -763,3 +763,44 @@ h1, h2, h3, h4, h5, p, ul { margin: 0; }
 }
 
 .categoria .dropdown ul { padding-left: 14px; margin-bottom: 6px; line-height: 1.5; }
+
+/* ---------- Blog: artigos ---------- */
+
+.blog-page { min-height: 60vh; }
+.article-head { padding: 64px 0 50px; text-align: center; }
+.article-head .cats { font-weight: 700; font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--green); }
+.article-head .cats a { text-decoration: none; }
+.article-head h1 {
+  font-family: var(--f-head); font-weight: 800; font-size: clamp(26px, 3.6vw, 39px); letter-spacing: 2px;
+  line-height: 1.25; color: var(--green); margin-top: 12px; text-transform: uppercase;
+}
+.article-wrap { max-width: 812px; padding-top: 50px; padding-bottom: 70px; }
+.article-cover { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; }
+.prose { font-size: 16px; line-height: 1.75; margin-top: 40px; }
+.prose::after { content: ""; display: block; clear: both; }
+.prose > * + * { margin-top: 18px; }
+.prose h2, .prose h3, .prose h4 { font-family: var(--f-head); color: var(--green); line-height: 1.3; margin-top: 36px; }
+.prose h2 { font-size: 24px; }
+.prose h3 { font-size: 20px; }
+.prose h4 { font-size: 17px; }
+.prose a { color: var(--green); }
+.prose ul, .prose ol { padding-left: 22px; }
+.prose blockquote { margin: 24px 0; padding: 4px 0 4px 22px; border-left: 3px solid var(--lime); font-style: italic; font-size: 18px; }
+.prose blockquote cite { display: block; font-size: 14px; font-style: normal; color: var(--terra); margin-top: 6px; }
+.prose code { background: var(--beige); padding: 1px 6px; font-size: 14px; }
+.prose figure { margin: 24px 0; }
+.prose figcaption { font-size: 13px; color: #777; margin-top: 6px; text-align: center; }
+.prose .aligncenter img { margin: 0 auto; }
+.prose .alignleft { float: left; width: 45%; margin: 6px 24px 12px 0; }
+.prose .alignright { float: right; width: 45%; margin: 6px 0 12px 24px; }
+.post-nav { display: flex; justify-content: space-between; gap: 20px; margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--lime); font-family: var(--f-head); font-weight: 600; font-size: 14px; }
+.post-nav a { color: var(--green); text-decoration: none; }
+.post-nav a:hover { text-decoration: underline; }
+.article .back { text-align: center; margin-top: 44px; }
+.post > a img { transition: opacity .2s; }
+.post > a:hover img { opacity: .85; }
+
+@media (max-width: 720px) {
+  .prose .alignleft, .prose .alignright { float: none; width: 100%; margin: 20px 0; }
+  .post-nav { flex-direction: column; }
+}
